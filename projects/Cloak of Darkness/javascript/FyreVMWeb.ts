@@ -45,6 +45,7 @@ module FyreVMWeb {
         WaitingFor: InputType;
         Status: StoryStatus;
         SessionData: FyreVM.Quetzal;
+        Turns: string[];
         OutputReady: () => void;
         EngineState: number;
         InputElement: HTMLInputElement;
@@ -80,6 +81,8 @@ module FyreVMWeb {
                 }
             }
             reader.send()
+
+            this.Turns = [];
         }
 
         public SendCommand(command: string) {
@@ -166,11 +169,14 @@ module FyreVMWeb {
                                     break;
                             }
 
+                            if (chanName == "MAIN") {
+                                this.Turns.push(fyrevm[channelDetails[2]]);
+                            }
+
                             break;
                         }
                     }
                 }
-
             }
         }
     }

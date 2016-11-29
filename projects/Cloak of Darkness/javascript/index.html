@@ -72,15 +72,15 @@
             // This is the main content...if you're using a single scrolling window, you would
             // append this content to it...
             if (fyrevm.bannerContent == undefined) {
-                document.getElementById('mainContent').innerHTML = '<b>' + fyrevm.locationName + '</b><br/><span>' + mainContentOut+ '</span>';
+                document.getElementById('mainContent').innerHTML += '<b>' + fyrevm.locationName + '</b><br/><span>' + mainContentOut+ '</span>';
             } else {
-                document.getElementById('mainContent').innerHTML = fyrevm.bannerContent + '<br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
+                document.getElementById('mainContent').innerHTML += fyrevm.bannerContent + '<br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
             }
         } else {
             if (fyrevm.bannerContent == undefined) {
-                document.getElementById('mainContent').innerHTML = fyrevm.prologueContent.trim() + '<br/><br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
+                document.getElementById('mainContent').innerHTML += fyrevm.prologueContent.trim() + '<br/><br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
             } else {
-                document.getElementById('mainContent').innerHTML = fyrevm.prologueContent.trim() + '<br/><br/>' + fyrevm.bannerContent + '<br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
+                document.getElementById('mainContent').innerHTML += fyrevm.prologueContent.trim() + '<br/><br/>' + fyrevm.bannerContent + '<br/><b>' + fyrevm.locationName + '</b>\n<span>' + mainContentOut + '</span>';
             }
         }
 
