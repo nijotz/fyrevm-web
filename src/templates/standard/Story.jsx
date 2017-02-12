@@ -3,12 +3,12 @@ import { Grid } from 'semantic-ui-react'
 import StandardMenu from '../../components/StandardMenu.js'
 import StatusLine from '../../components/StandardStatusLine.js'
 import ScrollingContent from '../../components/ScrollingContent.js'
+import FyreVMWeb from '../../FyreVMWeb.ts'
 
 class Story extends Component {
     constructor(props) {
         super(props);
-        const FyreVMWeb = window.FyreVMWeb;
-        this.fyrevm = new FyreVMWeb.Manager();
+        this.fyrevm = FyreVMWeb.Manager();
         this.defaults = {
             score: 0,
             turn: 1,
